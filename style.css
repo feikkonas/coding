@@ -1,0 +1,53 @@
+@keyframes box_1 {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+}
+section
+{
+  width:1349px;
+  height:627px; 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  margin: 0;
+}
+#pageA
+{ 
+  background:rgb(158, 142, 142);
+  position: relative; /* arrange background*/
+}
+#pageB
+{ 
+  background:rgb(0, 0, 0);
+  position: relative; /* arrange background*/
+}
+
+#box_1
+{
+  display: grid;
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  z-index: 1000;
+  position: absolute;
+  left: -70%;
+  top: -20%;
+  /*animation*/
+}
+#box_1 {
+    animation: box_1 2s ease-in-out infinite alternate;
+    -webkit-animation: box_1 2s ease-in-out infinite alternate;
+}
